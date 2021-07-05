@@ -10,7 +10,7 @@ return 1
 fi
 }
 
-function is_directory_exists() {
+function is_directory_exists {
 directory=$1
 if [ -d "$directory" ]; then
 return 0
@@ -20,7 +20,7 @@ return 1
 fi
 }
 
-function change_owner_and_folders(){
+function change_owner_and_folders {
 if (is_user_exists $1) && (is_directory_exists $2); then
 sudo chown $1 $2
 echo "INFO: Directory owner was successfully changed"
