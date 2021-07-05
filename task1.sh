@@ -22,7 +22,7 @@ fi
 
 function change_owner_and_folders {
 if (is_user_exists $1) && (is_directory_exists $2); then
-sudo chown $1 $2
+sudo chown -R $1 $2
 echo "INFO: Directory owner was successfully changed"
 fi
 }
